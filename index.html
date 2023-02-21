@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/logo_head.png">
+    <title>Alien Shooter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+</head>
+<body>
+
+    <header class="header">
+        <section class="header__logo_container">
+            <figure>
+                <img class="img_logo img_logo_left" src="img/logo_head.png" alt="alien head" title="alien's head in a hat" width="5000" height="5000">
+                <figcaption class="offscreen">Alien's head</figcaption>
+            </figure>
+            <h1 class="title">Alien Shooter</h1>
+            <figure>
+                <img class="img_logo img_logo_right" src="img/logo_head.png" alt="alien head" title="alien's head in a hat" width="5000" height="5000">
+                <figcaption class="offscreen">Alien's head</figcaption>
+            </figure>
+        </section>
+        <section class="header__p_container">
+            <!-- <p class="header__p"><span id="points">0</span> points</p> -->
+            <p class="header__p"><span id="shots">0</span> shots</p>
+            <p class="header__p"><span id="miss">0</span> missed</p>
+            <p class="header__p"><span id="accurancy">0</span>% accurancy</p>
+        </section>
+    </header>
+    
+    <main class="main accurancy" id="main">
+
+        <!-- WELCOME WINDOW -->
+        <article class="main__welcome">
+            <h2 class="main__welcome_h2"><span class="nowrap">Alien Shooter</span></h2>
+            <section class="main__welcome_instructions_container">
+                <p class="main__welcome_p shoot_enemies"><span class="nowrap">Shoot enemies</span></p>
+                <figure class="main__welcome_figure mini_octopus">
+                    <img width="627" height="628" src="img/ufo_octopus.png" alt="ufo octopus" class="img_ufo_octopus_mini">
+                    <figcaption class="offscreen">Cosmic Octopus</figcaption>
+                </figure>
+                <p class="main__welcome_p shoot_friends"><span class="nowrap">Don't shoot friends</span></p>
+                <figure class="main__welcome_figure mini_human">
+                    <img width="600" height="814" src="img/human.png" alt="human" class="img_human_mini">
+                    <figcaption class="offscreen">Human</figcaption>
+                </figure>
+            </section>
+            <button class="button" id="start-button">Start</button>
+        </article>
+
+        <!-- GAME END WINDOW -->
+        <article class="main__end_game">
+            <h2 class="main__welcome_h2">Game Over</h2>
+            <section class="main__end_instructions_container">
+                <p class="header__p"><span id="shots-end">0</span> shots</p>
+                <p class="header__p"><span id="miss-end">0</span> missed</p>
+                <p class="header__p"><span id="accurancy-end">0</span>% accurancy</p>
+                <p class="header__p"><span id="enemies-killed">0</span> enemies killed</p>
+                <p class="header__p"><span id="friends-killed">0</span> friends killed</p>
+            </section>
+            <button class="button" id="restart-button">Restart</button>
+        </article>
+
+        <!-- ENEMIES -->
+        <figure id="enemies-figure">
+            <img width="627" height="628" src="img/ufo_octopus.png" alt="ufo octopus" class="img_ufo_octopus accurancy" id="ufo-octopus">
+            <img width="621" height="863" src="img/alien.png" alt="normal alien" class="alien accurancy" id="alien">
+            <img width="613" height="500" src="img/ufo.png" alt="unidentified flying object" class="ufo accurancy" id="ufo">
+            <figcaption class="offscreen">Cosmic Enemies</figcaption>
+        </figure>
+
+        <!-- FRIENDS -->
+        <figure id="friends-figure">
+            <img width="268" height="435" src="img/human.png" alt="human" class="img_human" id="human">
+            <img width="931" height="1003" src="img/cow.png" alt="cow" class="img_cow" id="cow">
+            <img width="636" height="472" src="img/kitten2.png" alt="kitten" class="img_kitten" id="kitten">
+            <img width="900" height="882" src="img/family.png" alt="family" class="family" id="family">
+            <img width="835" height="543" src="img/police.png" alt="police" class="police" id="police">
+            <img width="1392" height="1080" src="img/satelite.png" alt="satelite" class="satelite" id="satelite">
+            <figcaption class="offscreen">Earth Friends</figcaption>
+        </figure>
+
+        <!-- GUNS -->
+        <figure>
+            <img width="627" height="628" src="img/gun.png" alt="cosmic gun in left hand" class="img_gun gun_left" id="gun-left">
+            <img width="627" height="628" src="img/gun_right.png" alt="cosmic gun in right hand" class="img_gun gun_right" id="gun-right">
+            <figcaption class="offscreen">Cosmic guns</figcaption>
+        </figure>
+
+        <!-- LIFES -->
+        <ul class="main__ul_lifes" id="hearts-ul">
+            <li class="main__li_lifes">
+                <figure>
+                    <img src="img/heart.png" alt="heart" class="img_heart" width="1080" height="1200">
+                    <figcaption class="offscreen">Heart 1 life</figcaption>
+                </figure>
+            </li>
+            <li class="main__li_lifes">
+                <figure>
+                    <img src="img/heart.png" alt="heart" class="img_heart" width="1080" height="1200">
+                    <figcaption class="offscreen">Heart 2 life</figcaption>
+                </figure>
+            </li>
+            <li class="main__li_lifes">
+                <figure>
+                    <img src="img/heart.png" alt="heart" class="img_heart" width="1080" height="1200">
+                    <figcaption class="offscreen">Heart 3 life</figcaption>
+                </figure>
+            </li>
+            <li class="main__li_lifes">
+                <figure>
+                    <img src="img/heart.png" alt="heart" class="img_heart" width="1080" height="1200">
+                    <figcaption class="offscreen">Heart 4 life</figcaption>
+                </figure>
+            </li>
+            <li class="main__li_lifes">
+                <figure>
+                    <img src="img/heart.png" alt="heart" class="img_heart" width="1080" height="1200">
+                    <figcaption class="offscreen">Heart 5 life</figcaption>
+                </figure>
+            </li>
+        </ul>
+
+        <!-- BLASTS -->
+        <figure>
+            <img width="886" height="1009" src="img/blast.png" alt="blast" class="img_blast" id="blast">
+            <figcaption class="offscreen">Blast</figcaption>
+        </figure>
+
+    </main>
+
+    <span class="red_screen"></span>
+    
+<script src="script.js"></script>
+</body>
+</html>
