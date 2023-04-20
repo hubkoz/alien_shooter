@@ -93,6 +93,10 @@ const friends = {
   }
 }
 
+window.onload = function() {
+  window.scrollTo(0, document.body.scrollHeight);
+}
+
 function accurancyCalculate() {
   hit = shots - miss
   accurancy = hit / shots * 100
